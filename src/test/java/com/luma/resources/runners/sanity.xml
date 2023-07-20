@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="sanity suite" verbose="1" >
+    <groups>
+        <run>
+            <include name="sanity"></include>
+        </run>
+    </groups>
+    <listeners>
+        <listener class-name="com.luma.demo.customlisteners.CustomListeners"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="sanity test" >
+        <classes>
+            <class name="com.luma.demo.testsuite.GearTest"/>
+            <class name="com.luma.demo.testsuite.WomenTest"/>
+            <class name="com.luma.demo.testsuite.MenTest"/>
+        </classes>
+    </test>
+</suite>
